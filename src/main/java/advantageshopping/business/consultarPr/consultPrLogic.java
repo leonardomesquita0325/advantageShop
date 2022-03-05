@@ -10,13 +10,13 @@ public class consultPrLogic extends baseMethod {
 
 	public void consultPr() throws IOException {
 		waitElementIsClickable(conPg.getSearch());
-		click(conPg.getSearch());
+		clickObjetoJavaScript(conPg.getSearch());
 		wait(500);
 		evidencias("target/cadUser/getSearch.png");
 	}
 	public void inputSearch() throws IOException{
 	   waitElementIsClickable(conPg.getInputSearch());
-	   click(conPg.getInputSearch());
+	   clickObjetoJavaScript(conPg.getInputSearch());
 	   inputText("BOSE SOUNDLINK BLUETOOTH SPEAKER III",conPg.getInputSearch());
 	   wait(500);
 	   evidencias("target/consultProd/valorSearch.png");	
@@ -28,7 +28,7 @@ public class consultPrLogic extends baseMethod {
 	}
 	public void closeSearch() throws IOException {
 		waitElementIsClickable(conPg.getCloseSearch());
-		click(conPg.getCloseSearch());
+		clickObjetoJavaScript(conPg.getCloseSearch());
 		wait(500);
 		evidencias("target/consultProd/closeSearch.png");
 	}

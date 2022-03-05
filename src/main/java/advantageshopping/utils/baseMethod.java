@@ -37,12 +37,16 @@ public class baseMethod extends navegacao{
 			e.printStackTrace();
 		}
 	}
+	public void waitElement(By element) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(element));
+	}
 	public Object executeJS (String sj, Object pr) { 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		return js.executeScript(sj, pr);
 	}
-	public void click (By valor) {
-		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(valor));
+	
+	public void clickObjetoJavaScript (By valor) {
+		waitElement(valor);
 		WebElement element = driver.findElement(valor);
 		wait(5000);
 		executeJS("javascript:void(0)", element);
@@ -62,13 +66,4 @@ public class baseMethod extends navegacao{
 		Select combo = new Select(driver.findElement(valor));
 		combo.selectByVisibleText(Text);
 	}
-	
-	public void waitIsVisibleElement (By element) { 
-		driver.findElement(element).isDisplayed();
-	}
-	
-	public void waitElement(By element) {
-		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(element));
-	}
-	
 }

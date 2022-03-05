@@ -12,7 +12,7 @@ public class cadUserLogic extends baseMethod {
 	
 	public void createAccount () throws IOException {
 		waitElementIsClickable(cdUser.getCreateAccount());
-		click(cdUser.getCreateAccount());
+		clickObjetoJavaScript(cdUser.getCreateAccount());
 		wait(500);
 		evidencias("target/cadUser/createAcount.png");
 	}
@@ -117,13 +117,13 @@ public class cadUserLogic extends baseMethod {
 		evidencias("target/cadUser/register.png");
 	}
 	public void contFormCad () throws IOException {
-		waitIsVisibleElement(cdUser.getRegister());
+		waitElement(cdUser.getRegister());
 		wait(500);
 		evidencias("target/cadUser/contFormCad.png");
 }
 	public void alreadyAccount() throws IOException {
 		waitElementIsClickable(cdUser.getAlreadyAccount());
-		click(cdUser.getAlreadyAccount());
+		clickObjetoJavaScript(cdUser.getAlreadyAccount());
 		wait(500);
 		evidencias("target/cadUser/alreadyAcount.png");
 	}

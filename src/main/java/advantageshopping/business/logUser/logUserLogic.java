@@ -16,7 +16,7 @@ public class logUserLogic extends baseMethod {
 	}
 	public void clickUser () throws IOException {
 		waitElementIsClickable(logUser.getBtnUser());
-		click(logUser.getBtnUser());
+		clickObjetoJavaScript(logUser.getBtnUser());
 		wait(500);
 		evidencias("target/logUser/clickUser.png");
 	}

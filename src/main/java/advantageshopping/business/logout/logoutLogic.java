@@ -8,15 +8,15 @@ public class logoutLogic extends baseMethod{
 	
 	public void clickUserCad() {
 		waitElementIsClickable(logPg.getUserCadastrado());
-		click(logPg.getUserCadastrado());	
+		clickObjetoJavaScript(logPg.getUserCadastrado());	
 	}
 	
 	public void logout() {
 		waitElementIsClickable(logPg.getBtnUs());
-		click(logPg.getBtnUs());	
+		clickObjetoJavaScript(logPg.getBtnUs());	
 	}
 	public void confirLogout() {
-		waitIsVisibleElement(logPg.getbtnFacebook());
+		waitElement(logPg.getbtnFacebook());
 		
 	}
 }

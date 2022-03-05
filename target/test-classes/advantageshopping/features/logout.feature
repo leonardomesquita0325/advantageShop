@@ -1,11 +1,11 @@
 #encoding: utf-8
-Feature: Realizo login no site Advantage Shopping
+Feature: Realizo logout no site Advantage Shopping
 
 
 Background:
 		Given que esteja na pagina inicial Advantage Shopping    
     And clico em user		
-  Scenario: Realizar login com sucesso no site
+  Scenario: Realizar logout com sucesso no site
     And insiro userName 
     And insiro password 
     And clico em logar
