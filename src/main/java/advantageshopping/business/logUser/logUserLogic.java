@@ -11,7 +11,23 @@ public class logUserLogic extends baseMethod {
 		logUserPage logUser = new logUserPage();
 		Excel tbexcel = new Excel();
 		
+	public void openBrowser(){
+		browseTheWeb("http://advantageonlineshopping.com/#/");
+	}
+	public void clickUser () throws IOException {
+		waitElementIsClickable(logUser.getBtnUser());
+		click(logUser.getBtnUser());
+		wait(500);
+		evidencias("target/logUser/clickUser.png");
+	}
 	
+	public void validateCategorySpeaker () throws Exception {
+		waitElementIsClickable(logUser.getSpakers());
+		wait(500);
+		evidencias("target/logUser/validoMensagem.png");
+
+	}
+		
 	public void User () throws IOException {
 		tbexcel.testExcelFile();
 		waitElement(logUser.getCmpUserName());

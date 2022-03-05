@@ -4,13 +4,23 @@ import java.io.IOException;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 
 public class logUserStep {
 
 	logUserLogic logLogic = new logUserLogic();
 	
+	@Given("^que esteja na pagina inicial Advantage Shopping$")
+	public void navigateWebSiteHomePage () {
+		logLogic.openBrowser();
+	}
 	
-	@Given("insiro userName$")
+	@And("^clico em user$")
+	public void selectUser () throws IOException {
+		logLogic.clickUser();
+	}
+	
+	@And("insiro userName$")
 	public void enterUser () throws IOException {
 		logLogic.User();
 	}
@@ -24,5 +34,8 @@ public class logUserStep {
 	public void clickToLogin () throws IOException{
 		logLogic.clickLogin();
 	}
-	
+	@Then("^valido category Speaker$")
+	public void validateFinalMessage () throws Exception {
+		logLogic.validateCategorySpeaker();
+	}
 } 

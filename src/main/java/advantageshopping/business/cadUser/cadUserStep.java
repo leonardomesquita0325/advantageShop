@@ -10,7 +10,7 @@ public class cadUserStep {
 	cadUserLogic cdLogi = new cadUserLogic();
 	
 	
-	@Given("clico em creat new account")
+	@And("clico em creat new account")
 	public void clickCreateAccount() throws IOException {
 		cdLogi.createAccount();
 	}
