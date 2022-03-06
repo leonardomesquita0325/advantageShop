@@ -1,5 +1,5 @@
 #encoding: utf-8
-Feature: Realizar cadastro com sucesso
+Feature: Cadastro de usuario
 
 Background:
 		Given que esteja na pagina inicial Advantage Shopping    
@@ -22,7 +22,7 @@ Background:
     And clico em register
     Then valido category Speaker
     
-Scenario: Abrir form de creat new account porem clico em already have an account e entro com login e senha
+Scenario: Abrir form de cadastro porem clico em already have an account e entro com login e senha
     And clico em creat new account
     And clico em already have an account
     And insiro userName 

@@ -13,7 +13,6 @@ Scenario: Adiciona produtos ao carrinho
     And adiciono speaker ao carrinho
     And clico no icone de cart
     Then confirmo o speaker selecionado
-
 Scenario: Remover produto adicionado ao carrinho
     And clico no icone de cart
     And clico em remove item
